@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+      #header {
+        padding: 4px;
+        float: left;
+        width: 256px;
+      }
+      h1 {
+        padding: 0;
+        margin: 0;
+      }
+      body { font-family: sans-serif; }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQCU3F1OHX_cljI31zr2TLe1pRBXkLE_8&sensor=false">
+      </script>
+      <script src="/js/jquery-2.0.2.min.js"></script>
+      <script src="/js/bike2piano.js"></script>
+      <script type="text/javascript">
+        google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+      </head>
+      <body>
+        <div id="header">
+          <h1>Bike to a Piano</h1>
+          <p>Use a <a href="http://citibikenyc.com">CitiBike</a> to get to a <a href="http://www.singforhope.org/">Sing for Hope Piano</a> in New York City!</p>
+          <p><ul><li>Green markers are pianos.</li><li>Blue markers are CitiBike stations.</li></ul></p>
+          <p><i>Note: This data is currently not updated regularly.</i></p>
+        </div>
+        <div id="map-canvas"/>
+        </body>
+      </html>
